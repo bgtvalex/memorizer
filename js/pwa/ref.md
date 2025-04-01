@@ -1,1 +1,0 @@
-[pwacompat](https://github.com/GoogleChromeLabs/pwacompat?tab=readme-ov-file)
