@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script async src="js/pwa/pwacompat.min.js"></script>
+    <link rel="icon" type="image/png" href="img/icon-128.png" sizes="128x128" />
+    <link rel="icon" href="img/icon-512.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/input.css" />
+    <title>Запоминалка</title>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      ;(function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            ;(m[i].a = m[i].a || []).push(arguments)
+          }
+        m[i].l = 1 * new Date()
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return
+          }
+        }
+        ;(k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a)
+      })(
+        window,
+        document,
+        'script',
+        'https://mc.yandex.ru/metrika/tag.js',
+        'ym'
+      )
+
+      ym(100682455, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      })
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/100682455"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body>
+    <div class="navigation">
+      <a href="list.html" class="btn btn-list">Список</a>
+      <div class="ver"></div>
+    </div>
+    <div class="app">
+      <div class="container">
+        <div class="wrapper">
+          <form class="form">
+            <div class="books__wrapper">
+              <select type="text" name="book" class="book"></select>
+              <input
+                type="text"
+                name="chapter"
+                class="chapter"
+                placeholder="гл"
+                required
+                autocomplete="off"
+              />
+              <input
+                type="text"
+                name="verse"
+                class="verse"
+                placeholder="ст"
+                required
+                autocomplete="off"
+              />
+              <select type="text" name="trans" class="trans"></select>
+            </div>
+            <textarea
+              name="input"
+              class="input"
+              wrap="hard"
+              required
+            ></textarea>
+            <input type="submit" class="btn add" value="+" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/versions/versions.js"></script>
+    <script src="js/versions/get-version.js"></script>
+    <script src="js/db/books.js"></script>
+    <script src="js/db/trans.js"></script>
+    <script src="js/main/func.js"></script>
+    <script src="js/main/storage.js"></script>
+    <script src="js/input/input.js"></script>
+  </body>
+</html>
