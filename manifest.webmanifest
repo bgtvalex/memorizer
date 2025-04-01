@@ -1,0 +1,19 @@
+{
+  "name": "Memorizer Bible",
+  "short_name": "Memorizer",
+  "display": "standalone",
+  "start_url": "/memorizer/",
+  "background_color": "#3c5165",
+  "icons": [
+    {
+      "src": "img/icon-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "img/icon-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ]
+}

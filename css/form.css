@@ -1,0 +1,96 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.books__wrapper {
+  display: flex;
+  gap: 10px;
+}
+.book {
+  background-color: var(--l-blue);
+  font-size: 16px;
+  border: 1px solid var(--l-gray);
+  border-radius: 3px;
+  color: var(--gray);
+  outline: none;
+}
+.chapter,
+.verse,
+.trans {
+  width: 30px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid var(--l-gray);
+  background-color: var(--l-blue);
+  border-radius: 3px;
+  color: var(--gray);
+  outline: none;
+}
+.verse {
+  width: 65px;
+}
+.trans {
+  width: 100%;
+  text-align: left;
+}
+.book:active,
+.chapter:active,
+.verse:active,
+.book:focus,
+.chapter:focus,
+.verse:focus {
+  border-color: var(--l-blue);
+  color: var(--gray);
+}
+.input {
+  padding: 5px;
+  width: 500px;
+  height: 250px;
+  background: var(--l-gray);
+  border: 2px solid var(--l-gray);
+  color: var(--gray);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+  outline: none;
+}
+.input:active,
+.input:focus {
+  border-color: var(--l-blue);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    width: 501px;
+  }
+  .input {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .form {
+    width: 90%;
+  }
+  .input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form {
+    width: 90%;
+  }
+  .input {
+    width: 100%;
+  }
+}
