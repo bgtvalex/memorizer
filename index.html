@@ -8,8 +8,10 @@
     <link rel="icon" type="image/png" href="img/icon-128.png" sizes="128x128" />
     <link rel="icon" href="img/icon-512.png" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/input.css" />
-    <title>Запоминалка</title>
+    <link rel="stylesheet" href="css/list.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <title>Библия наизусть</title>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       ;(function (m, e, t, r, i, k, a) {
@@ -56,51 +58,29 @@
   </head>
   <body>
     <div class="navigation">
-      <a href="list.html" class="btn btn-list">Список</a>
+      <div class="btn add-card">+</div>
       <div class="ver"></div>
-    </div>
-    <div class="app">
-      <div class="container">
-        <div class="wrapper">
-          <form class="form">
-            <div class="books__wrapper">
-              <select type="text" name="book" class="book"></select>
-              <input
-                type="text"
-                name="chapter"
-                class="chapter"
-                placeholder="гл"
-                required
-                autocomplete="off"
-              />
-              <input
-                type="text"
-                name="verse"
-                class="verse"
-                placeholder="ст"
-                required
-                autocomplete="off"
-              />
-              <select type="text" name="trans" class="trans"></select>
-            </div>
-            <textarea
-              name="input"
-              class="input"
-              wrap="hard"
-              required
-            ></textarea>
-            <input type="submit" class="btn add" value="+" />
-          </form>
-        </div>
-      </div>
+      <select class="select-list">
+        <option value="active">изучаю</option>
+        <option value="wait">ожидает</option>
+        <option value="done">выучено</option>
+        <option value="all">все</option>
+      </select>
     </div>
 
-    <script src="js/versions/versions.js"></script>
-    <script src="js/versions/get-version.js"></script>
-    <script src="js/db/books.js"></script>
-    <script src="js/db/trans.js"></script>
-    <script src="js/main/func.js"></script>
-    <script src="js/main/storage.js"></script>
-    <script src="js/input/input.js"></script>
+    <div class="container">
+      <div class="cards"></div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal">
+      <div class="modal__wrapper">
+        <img src="img/close.png" class="modal__close" />
+        <div class="modal__content"></div>
+      </div>
+    </div>
+    <!--./modal-->
+
+    <script type="module" src="app.js"></script>
   </body>
 </html>
