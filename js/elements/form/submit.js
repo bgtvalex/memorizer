@@ -21,36 +21,7 @@ export function handleSubmit(e, form) {
 
   // находим карту с таким же ID
   let card = db.find((i) => i.id == obj.id)
-  /*
-  // сохраняем предыдущие данные при редактировании
-  let saveObj = {}
 
-  // проверяем есть ли id
-  if (card) {
-    saveObj = {
-      // id: card.id,
-      // create: card.create,
-      // start: card.start,
-      // finish: card.finish,
-      // lastRemember: card.lastRemember,
-      // count: card.count,
-      // status: card.status,
-      transFull: trans.find((i) => i.id == card.trans).title,
-    }
-    console.log('saveObj:', saveObj)
-  } else {
-    saveObj = {
-      id: Date.now(),
-      create: getToday(new Date()),
-      start: '',
-      finish: '',
-      lastRemember: '',
-      count: 0,
-      status: 'wait',
-      transFull: trans.find((i) => i.id == obj.trans).title,
-    }
-  }
-*/
   // формируем объект карты
   const memo = {
     id: Date.now(),
@@ -83,8 +54,8 @@ export function handleSubmit(e, form) {
   }
 
   setDB('memorizer', db)
-  // closeModal()
-  // renderCards()
+  closeModal()
+  renderCards()
 }
 
 export function getPlace(obj) {
