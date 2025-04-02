@@ -90,4 +90,11 @@ export const ver = [
     start: '31.03.2025',
     finish: '31.03.2025',
   },
+  {
+    ver: '2.1.2',
+    desc: 'fix date',
+    comm: 'month + 1',
+    start: '31.03.2025',
+    finish: '31.03.2025',
+  },
 ]

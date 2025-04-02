@@ -5,7 +5,7 @@ import { trans } from '../db/trans.js'
 export function getToday(today) {
   const date = new Date(today)
   const y = date.getFullYear(today)
-  const m = addZero(date.getMonth(today))
+  const m = addZero(date.getMonth(today) + 1)
   const d = addZero(date.getDate(today))
   return `${y}-${m}-${d}`
 }
