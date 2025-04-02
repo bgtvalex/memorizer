@@ -1,6 +1,7 @@
 import { getDB, setDB } from '../../func/storage.js'
 import { trans } from '../../db/trans.js'
-import { setSelect, handleSubmit } from '../../func/func.js'
+import { setSelect } from '../select/select-list.js'
+import { handleSubmit } from '../form/submit.js'
 
 export function editCard(el, id) {
   let bd = getDB('memorizer')
@@ -10,6 +11,14 @@ export function editCard(el, id) {
   <div class="info">
     <div class="wrapper">
           <form class="modal__form">
+              <input
+                value="${card.id}"
+                type="number"
+                name="id"
+                class="id"
+                hidden="true"
+                autocomplete="off"
+              />
             <div class="modal__books__wrapper">
               <select type="text" name="book" class="modal__book">
                 <option value="${card.book}">${card.book}</option>
@@ -50,10 +59,15 @@ export function editCard(el, id) {
   const $modalTran = document.querySelector('.modal__trans')
   const $modalForm = document.querySelector('.modal__form')
   setSelect($modalBook, $modalTran)
-  $modalForm.addEventListener('submit', (e) => {
-    renderCards()
-    console.log('close')
-    handleSubmit(e, $modalForm)
-    closeModal()
+  // $modalForm.addEventListener('submit', (e) => {
+  //   renderCards()
+  //   console.log('close')
+  //   handleSubmit(e, $modalForm)
+  //   closeModal()
+  // })
+
+  const $form = document.querySelector('.modal__form')
+  $form.addEventListener('submit', (e) => {
+    handleSubmit(e, $form)
   })
 }

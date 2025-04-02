@@ -28,7 +28,7 @@ export function setSelect($book, $trans) {
   books.forEach((book) => {
     $book.innerHTML += `<option value="${book}">${book}</option>`
   })
-  trans.forEach((book) => {
-    $trans.innerHTML += `<option value="${book.id}">${book.title}</option>`
+  trans.forEach((tr) => {
+    $trans.innerHTML += `<option value="${tr.id}">(${tr.id}) ${tr.title}</option>`
   })
 }

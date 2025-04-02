@@ -13,7 +13,7 @@ import { getToday } from './func.js'
 
 export function addListeners() {
   let bd = getDB('memorizer')
-  const cards = document.querySelectorAll('.card')
+  const cards = document.querySelectorAll('.card__text')
 
   for (let card of cards) {
     card.addEventListener('click', (e) => {

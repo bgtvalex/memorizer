@@ -1,5 +1,5 @@
-import { getDB, setDB } from "../../func/storage.js"
-import {closeModal} from '../modal/modal.js'
+import { getDB, setDB } from '../../func/storage.js'
+import { closeModal } from '../modal/modal.js'
 import { renderCards } from '../render-cards.js'
 
 export function delCard(id) {

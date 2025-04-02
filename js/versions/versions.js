@@ -76,4 +76,11 @@ export const ver = [
         start: '31.03.2025',
         finish: '31.03.2025'
     },
+    {
+        ver: '2.1.0',
+        desc: 'edit-card',
+        comm: 'add edit card',
+        start: '31.03.2025',
+        finish: '31.03.2025'
+    },
 ]

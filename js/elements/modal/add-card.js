@@ -41,6 +41,5 @@ export function addCard() {
   setSelect($book, $trans)
 
 	const $form = document.querySelector('.form')
-	console.log('form: ', $form)
 	$form.addEventListener('submit', (e) => {handleSubmit(e, $form)})
 }
