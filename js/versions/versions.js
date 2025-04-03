@@ -94,7 +94,14 @@ export const ver = [
     ver: '2.1.2',
     desc: 'fix date',
     comm: 'month + 1',
-    start: '31.03.2025',
-    finish: '31.03.2025',
+    start: '02.04.2025',
+    finish: '02.04.2025',
+  },
+  {
+    ver: '2.2.0',
+    desc: 'menu, uploading',
+    comm: 'backup',
+    start: '04.04.2025',
+    finish: '04.04.2025',
   },
 ]

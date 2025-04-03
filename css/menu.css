@@ -1,0 +1,25 @@
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  width: 100%;
+  color: var(--white);
+  font-family: sans-serif;
+  font-size: 18px;
+}
+.menu__item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.menu__h {
+  color: var(--orange);
+  font-size: 20px;
+}
+.menu__img {
+  width: 25px;
+  height: 25px;
+}

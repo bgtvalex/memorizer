@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/list.css" />
     <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/menu.css" />
     <title>Библия наизусть 2.1.0</title>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -58,14 +59,19 @@
   </head>
   <body>
     <div class="navigation">
-      <div class="btn add-card">+</div>
+      <div class="menu btn">
+        <img src="img/menu.png" alt="menu" />
+      </div>
       <div class="ver"></div>
-      <select class="select-list">
-        <option value="active">изучаю</option>
-        <option value="wait">ожидает</option>
-        <option value="done">выучено</option>
-        <option value="all">все</option>
-      </select>
+      <div class="wrapper__nav">
+        <div class="btn add-card">+</div>
+        <select class="select-list">
+          <option value="active">изучаю</option>
+          <option value="wait">ожидает</option>
+          <option value="done">выучено</option>
+          <option value="all">все</option>
+        </select>
+      </div>
     </div>
 
     <div class="container">
@@ -80,6 +86,8 @@
       </div>
     </div>
     <!--./modal-->
+
+    
 
     <script type="module" src="app.js"></script>
   </body>
