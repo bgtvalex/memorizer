@@ -14,6 +14,7 @@ export function menu() {
         <div class="menu__text">Выгрузить данные</div>
       </li>
       <li class="menu__item import">
+        <input type="file" class="menu__file" hidden="true">
         <img class="menu__img" src="img/import.png" alt="data" />
         <div class="menu__text">Загрузить данные</div>
       </li>

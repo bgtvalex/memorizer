@@ -104,4 +104,11 @@ export const ver = [
     start: '04.04.2025',
     finish: '04.04.2025',
   },
+  {
+    ver: '2.2.1',
+    desc: 'uploading',
+    comm: 'import',
+    start: '04.04.2025',
+    finish: '04.04.2025',
+  },
 ]
