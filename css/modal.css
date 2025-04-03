@@ -134,6 +134,9 @@
 }
 
 @media screen and (min-width: 576px) {
+  .modal__wrapper {
+    width: 90%;
+  }
   .modal__form {
     width: 90%;
   }
