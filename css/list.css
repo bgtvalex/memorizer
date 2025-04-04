@@ -37,9 +37,13 @@
   background: var(--l-blue);
   color: var(--gray);
 }
+.study {
+  /* background: var(--l-blue); */
+  color: var(--yellow);
+}
 .wait {
   background: var(--gray);
-  color: var(--blue);
+  color: var(--l-blue);
 }
 .card__id {
   font-size: 0;
@@ -84,6 +88,7 @@
   background-color: var(--l-blue);
   border: 1px solid var(--blue);
   border-radius: 3px;
+  font-size: 13px;
 }
 .card__counter {
   padding: 5px 10px;

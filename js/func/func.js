@@ -25,3 +25,13 @@ export function replaceAllReturns(inText) {
   }
   return outText
 }
+
+// замена тегов спец-символами (безопасный ввод)
+
+export function saveHtmlString (inp) {
+  return inp
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&mt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll('&', '&amp;')
+}

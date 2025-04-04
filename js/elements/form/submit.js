@@ -4,6 +4,7 @@ import { trans } from '../../db/trans.js'
 import { replaceAllReturns } from '../../func/func.js'
 import { renderCards } from '../render-cards.js'
 import { closeModal } from '../modal/modal.js'
+import { saveHtmlString } from '../../func/func.js'
 
 const db = getDB('memorizer')
 

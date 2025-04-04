@@ -23,9 +23,14 @@ export function addListeners() {
       const item = bd.find((item) => item.id == id)
 
       item.count++
-      if (item.count > 0 && item.count < 100) {
-        item.status = 'active'
+      if (item.count == 1) {
         item.start = getToday(Date.now())
+      }
+      if (item.count > 0 && item.count <= 10) {
+        item.status = 'study'
+      }
+      if (item.count > 10 && item.count <= 100) {
+        item.status = 'active'
       }
       if (item.count >= 100) {
         item.status = 'done'

@@ -5,16 +5,21 @@ export function renderCards(status = 'active') {
   let $cards = document.querySelector('.cards')
   let bd = getDB('memorizer')
   $cards.innerHTML = ''
-  if (status !== 'all') {
-    bd = bd.filter((item) => item.status == status)
-  }
+  // если список пуст
   if (bd.length == 0) {
     $cards.innerHTML = '<h2>Список пуст.</h2>'
+  }
+
+  if (status !== 'all') {
+    bd = bd.filter((item) => item.status == status)
   }
   bd.forEach((item) => {
     let cl = ''
     if (item.status == 'wait') {
       cl = 'wait'
+    }
+    if (item.status == 'study') {
+      cl = 'study'
     }
     if (item.status == 'active') {
       cl = 'active'

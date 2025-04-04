@@ -10,6 +10,9 @@ export function selectList() {
       case 'wait':
         renderCards('wait')
         break
+      case 'study':
+        renderCards('study')
+        break
       case 'done':
         renderCards('done')
         break
