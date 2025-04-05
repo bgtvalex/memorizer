@@ -75,7 +75,8 @@
 }
 .chapter,
 .verse,
-.modal__trans {
+.modal__trans,
+.start {
   width: 30px;
   text-align: center;
   font-size: 16px;
@@ -91,6 +92,16 @@
 .modal__trans {
   width: 100%;
   text-align: left;
+}
+.start__label {
+  color: var(--white);
+  display: flex;
+  gap: 15px;
+}
+.start {
+  text-align: center;
+  width: 125px;
+  margin-bottom: 30px;
 }
 .modal__book:active,
 .chapter:active,
@@ -156,6 +167,6 @@
     font-size: 16px;
   }
   .input {
-    width: 100%;
+    width: 95%;
   }
 }

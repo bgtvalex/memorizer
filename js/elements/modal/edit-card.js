@@ -50,6 +50,10 @@ export function editCard(el, id) {
               class="input"
               required
             >${card.text}</textarea>
+            <label class="start__label" for="start"> Старт:
+              <input name="start" type="date" class="start">
+            </label>
+            
             <input type="submit" class="btn add" value="Изменить" />
           </form>
         </div>

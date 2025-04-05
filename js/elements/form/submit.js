@@ -27,7 +27,7 @@ export function handleSubmit(e, form) {
   const memo = {
     id: Date.now(),
     create: getToday(new Date()),
-    start: '',
+    start: getToday(obj.start),
     finish: '',
     lastRemember: '',
     text: obj.input,
@@ -43,6 +43,7 @@ export function handleSubmit(e, form) {
   console.log('memo:', memo)
 
   if (card) {
+    card.start = memo.start
     card.book = memo.book
     card.chapter = memo.chapter
     card.verse = memo.verse
