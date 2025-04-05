@@ -1,7 +1,10 @@
 import { getDB } from '../func/storage.js'
 import { addListeners } from '../func/add-listeners.js'
 
-export function renderCards(status = 'active') {
+export function renderCards() {
+  const $select = document.querySelector('.select-list')
+  const status = $select.value
+
   let $cards = document.querySelector('.cards')
   let bd = getDB('memorizer')
   $cards.innerHTML = ''

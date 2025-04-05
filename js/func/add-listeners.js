@@ -39,7 +39,7 @@ export function addListeners() {
       item.lastRemember = getToday(Date.now())
 
       setDB('memorizer', bd)
-      renderCards('active')
+      renderCards()
     })
 
     // долгое нажатие

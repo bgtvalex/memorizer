@@ -1,7 +1,7 @@
 import { getDB, setDB } from './storage.js'
-import {selectList} from '../elements/select/select-list.js'
 import {renderCards} from '../elements/render-cards.js'
 import {demo} from '../db/demo.js'
+import { selectList } from '../elements/select/select-list.js'
 
 export function init() {
   let bd = getDB('memorizer')
@@ -12,6 +12,6 @@ export function init() {
 
   if (bd.length >= 0) {
     selectList()
-    renderCards('active')
+    renderCards()
   }
 }
