@@ -37,7 +37,6 @@ export function saveHtmlString(inp) {
 }
 
 export function getStatus(item) {
-  console.log('getStatus', item)
   if (item.count == 0) {
     item.status = 'wait'
   }
