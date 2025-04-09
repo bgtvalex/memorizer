@@ -5,8 +5,7 @@ import { replaceAllReturns } from '../../func/func.js'
 import { renderCards } from '../render-cards.js'
 import { closeModal } from '../modal/modal.js'
 import { saveHtmlString } from '../../func/func.js'
-
-const db = getDB('memorizer')
+import { getStatus } from './../../func/func.js'
 
 export function handleSubmit(e, form) {
   e.preventDefault()
@@ -21,6 +20,7 @@ export function handleSubmit(e, form) {
   console.log('formData', obj)
 
   // находим карту с таким же ID
+  const db = getDB('memorizer')
   let card = db.find((i) => i.id == obj.id)
 
   // формируем объект карты
@@ -35,7 +35,7 @@ export function handleSubmit(e, form) {
     book: obj.book,
     chapter: obj.chapter,
     verse: obj.verse,
-    count: 0,
+    count: obj.count,
     status: 'wait',
     trans: obj.trans,
     transFull: trans.find((i) => i.id == obj.trans).title,
@@ -51,10 +51,12 @@ export function handleSubmit(e, form) {
     card.text = memo.text
     card.trans = memo.trans
     card.transFull = memo.transFull
+    card.count = memo.count
+    card.status = getStatus(card).status
   } else {
     db.push(memo)
   }
-
+  console.log('card:', card)
   setDB('memorizer', db)
   closeModal()
   renderCards()

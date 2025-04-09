@@ -33,6 +33,7 @@ export function addCard() {
 				wrap="hard"
 				required
 			></textarea>
+			<input name="count" type="text" class="count" value="0" hidden="true">
 			<input type="submit" class="btn add" value="Добавить" />
 		</form>`
 

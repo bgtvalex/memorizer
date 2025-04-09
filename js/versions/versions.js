@@ -127,9 +127,16 @@ export const ver = [
   },
   {
     ver: '2.3.0',
-    desc: 'start',
+    desc: 'start edit',
     comm: 'возможность изменить "start"',
     start: '05.04.2025',
     finish: '05.04.2025',
+  },
+  {
+    ver: '2.4.0',
+    desc: 'edit count',
+    comm: 'возможность изменить число повторений',
+    start: '09.04.2025',
+    finish: '09.04.2025',
   },
 ]

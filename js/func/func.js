@@ -28,10 +28,31 @@ export function replaceAllReturns(inText) {
 
 // замена тегов спец-символами (безопасный ввод)
 
-export function saveHtmlString (inp) {
+export function saveHtmlString(inp) {
   return inp
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&mt;')
     .replaceAll('"', '&quot;')
     .replaceAll('&', '&amp;')
+}
+
+export function getStatus(item) {
+  console.log('getStatus', item)
+  if (item.count == 0) {
+    item.status = 'wait'
+  }
+  if (item.count == 1) {
+    item.start = getToday(Date.now())
+  }
+  if (item.count > 0 && item.count <= 9) {
+    item.status = 'study'
+  }
+  if (item.count >= 10 && item.count <= 100) {
+    item.status = 'active'
+  }
+  if (item.count >= 100) {
+    item.status = 'done'
+    item.finish = getToday(Date.now())
+  }
+  return item
 }

@@ -50,8 +50,11 @@ export function editCard(el, id) {
               class="input"
               required
             >${card.text}</textarea>
-            <label class="start__label" for="start"> Старт:
-              <input name="start" type="date" class="start">
+            <label class="start__label" for="start">Старт:
+              <input name="start" type="date" class="start" value="${card.start}">
+            </label>
+            <label class="count__label" for="count">Повторения:
+              <input name="count" type="text" class="count" value="${card.count}">
             </label>
             
             <input type="submit" class="btn add" value="Изменить" />
@@ -63,12 +66,7 @@ export function editCard(el, id) {
   const $modalTran = document.querySelector('.modal__trans')
   const $modalForm = document.querySelector('.modal__form')
   setSelect($modalBook, $modalTran)
-  // $modalForm.addEventListener('submit', (e) => {
-  //   renderCards()
-  //   console.log('close')
-  //   handleSubmit(e, $modalForm)
-  //   closeModal()
-  // })
+  
 
   const $form = document.querySelector('.modal__form')
   $form.addEventListener('submit', (e) => {

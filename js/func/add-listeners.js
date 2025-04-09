@@ -10,6 +10,7 @@ import { editCard } from '../elements/modal/edit-card.js'
 import { infoCard } from '../elements/modal/info-card.js'
 import { delCard } from '../elements/modal/del-card.js'
 import { getToday } from './func.js'
+import { getStatus } from './func.js'
 
 export function addListeners() {
   let bd = getDB('memorizer')
@@ -23,21 +24,9 @@ export function addListeners() {
       const item = bd.find((item) => item.id == id)
 
       item.count++
-      if (item.count == 1) {
-        item.start = getToday(Date.now())
-      }
-      if (item.count > 0 && item.count <= 10) {
-        item.status = 'study'
-      }
-      if (item.count > 10 && item.count <= 100) {
-        item.status = 'active'
-      }
-      if (item.count >= 100) {
-        item.status = 'done'
-        item.finish = getToday(Date.now())
-      }
-      item.lastRemember = getToday(Date.now())
+      getStatus(item)
 
+      item.lastRemember = getToday(Date.now())
       setDB('memorizer', bd)
       renderCards()
     })
