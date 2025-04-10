@@ -36,6 +36,50 @@ export function saveHtmlString(inp) {
     .replaceAll('&', '&amp;')
 }
 
+export function lineBreak(text) {
+  const regex = /\d+/gm
+  let text2 = text.replace('/t', '').replace('/n')
+  let text3 = text2.replace(regex, `<br/>$&`).slice(5)
+  return text3
+}
+
+/* РЕДАКТОР */
+export function addBreak(){
+      let myElement = document.querySelector('.input');
+      let startPosition = myElement.selectionStart;
+      let endPosition = myElement.selectionEnd;
+
+      let text = myElement.value
+      myElement.value = text.slice(0, startPosition) + '<br />' + text.slice(startPosition)
+}
+
+export function addStrong(){
+      let myElement = document.querySelector('.input');
+      let startPosition = myElement.selectionStart;
+      let endPosition = myElement.selectionEnd;
+
+      let text = myElement.value
+      myElement.value = text.slice(0, startPosition) + '<b>' + text.slice(startPosition, endPosition) + '</b>' + text.slice(endPosition)
+}
+
+export function addItalic(){
+      let myElement = document.querySelector('.input');
+      let startPosition = myElement.selectionStart;
+      let endPosition = myElement.selectionEnd;
+
+      let text = myElement.value
+      myElement.value = text.slice(0, startPosition) + '<i>' + text.slice(startPosition, endPosition) + '</i>' + text.slice(endPosition)
+}
+
+export function addUnderline(){
+      let myElement = document.querySelector('.input');
+      let startPosition = myElement.selectionStart;
+      let endPosition = myElement.selectionEnd;
+
+      let text = myElement.value
+      myElement.value = text.slice(0, startPosition) + '<u>' + text.slice(startPosition, endPosition) + '</u>' + text.slice(endPosition)
+}
+
 export function getStatus(item) {
   if (item.count == 0) {
     item.status = 'wait'

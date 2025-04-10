@@ -10,7 +10,6 @@ export function delCard(id) {
   if (allow) {
     closeModal()
     bd = bd.filter((i) => i.id != id)
-    console.log(bd)
     setDB('memorizer', bd)
     renderCards($select.value)
   }

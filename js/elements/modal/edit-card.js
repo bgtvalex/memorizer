@@ -2,6 +2,7 @@ import { getDB, setDB } from '../../func/storage.js'
 import { trans } from '../../db/trans.js'
 import { setSelect } from '../select/select-list.js'
 import { handleSubmit } from '../form/submit.js'
+import { addBreak, addItalic, addStrong, addUnderline } from '../../func/func.js'
 
 export function editCard(el, id) {
   let bd = getDB('memorizer')
@@ -50,6 +51,12 @@ export function editCard(el, id) {
               class="input"
               required
             >${card.text}</textarea>
+            <div class="buttons-reduction">
+              <div class="btn-r btn-break">↵</div>
+              <div class="btn-r btn-strong">жирный</div>
+              <div class="btn-r btn-italic">курсив</div>
+              <div class="btn-r btn-underline">подчеркнуто</div>
+            </div>
             <label class="start__label" for="start">Старт:
               <input name="start" type="date" class="start" value="${card.start}">
             </label>
@@ -66,10 +73,15 @@ export function editCard(el, id) {
   const $modalTran = document.querySelector('.modal__trans')
   const $modalForm = document.querySelector('.modal__form')
   setSelect($modalBook, $modalTran)
-  
 
   const $form = document.querySelector('.modal__form')
   $form.addEventListener('submit', (e) => {
     handleSubmit(e, $form)
   })
+    
+    // кнопки редактора
+    document.querySelector('.btn-break').addEventListener('click', addBreak)
+    document.querySelector('.btn-strong').addEventListener('click', addStrong)
+    document.querySelector('.btn-italic').addEventListener('click', addItalic)
+    document.querySelector('.btn-underline').addEventListener('click', addUnderline)
 }

@@ -4,7 +4,7 @@ import { trans } from '../../db/trans.js'
 import { replaceAllReturns } from '../../func/func.js'
 import { renderCards } from '../render-cards.js'
 import { closeModal } from '../modal/modal.js'
-import { saveHtmlString } from '../../func/func.js'
+import { lineBreak } from '../../func/func.js'
 import { getStatus } from './../../func/func.js'
 
 export function handleSubmit(e, form) {
@@ -17,7 +17,6 @@ export function handleSubmit(e, form) {
     obj[key] = val
   })
   form.reset()
-  console.log('formData', obj)
 
   // находим карту с таким же ID
   const db = getDB('memorizer')
@@ -40,7 +39,6 @@ export function handleSubmit(e, form) {
     trans: obj.trans,
     transFull: trans.find((i) => i.id == obj.trans).title,
   }
-  console.log('memo:', memo)
 
   if (card) {
     card.start = memo.start
@@ -56,7 +54,6 @@ export function handleSubmit(e, form) {
   } else {
     db.push(memo)
   }
-  console.log('card:', card)
   setDB('memorizer', db)
   closeModal()
   renderCards()
