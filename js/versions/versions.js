@@ -167,4 +167,18 @@ export const ver = [
     start: '11.04.2025',
     finish: '11.04.2025',
   },
+  {
+    ver: '2.7.2',
+    desc: 'PWA',
+    comm: 'list files',
+    start: '11.04.2025',
+    finish: '11.04.2025',
+  },
+  {
+    ver: '2.7.3',
+    desc: 'PWA',
+    comm: 'version',
+    start: '11.04.2025',
+    finish: '11.04.2025',
+  },
 ]
