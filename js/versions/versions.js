@@ -150,7 +150,14 @@ export const ver = [
     ver: '2.6.0',
     desc: 'editor',
     comm: 'break, strong, italic, underline',
-    start: '09.04.2025',
-    finish: '09.04.2025',
+    start: '10.04.2025',
+    finish: '10.04.2025',
+  },
+  {
+    ver: '2.7.0',
+    desc: 'PWA',
+    comm: 'self-written',
+    start: '11.04.2025',
+    finish: '11.04.2025',
   },
 ]
