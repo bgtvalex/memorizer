@@ -5,7 +5,7 @@
   "background_color": "#3c5165",
   "display": "standalone",
   "orientation": "portrait",
-  "start_url": "/",
+  "start_url": "/memorizer/",
   "icons": [
     {
       "src": "img/icon-512.png",
