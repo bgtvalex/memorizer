@@ -209,4 +209,11 @@ export const ver = [
     start: '11.04.2025',
     finish: '11.04.2025',
   },
+  {
+    ver: '2.7.8',
+    desc: 'PWA',
+    comm: 'delete maskable',
+    start: '11.04.2025',
+    finish: '11.04.2025',
+  },
 ]

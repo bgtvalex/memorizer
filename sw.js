@@ -1,7 +1,7 @@
 // import { version } from "./modules/utils/helpers/get-version"
 // version()
 
-const ver = '2.7.3'
+const ver = '2.7.8'
 const cacheName = 'Memomizer-pwa-v-' + ver
 const filesToCache = [
   '/',
