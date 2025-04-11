@@ -202,4 +202,11 @@ export const ver = [
     start: '11.04.2025',
     finish: '11.04.2025',
   },
+  {
+    ver: '2.7.7',
+    desc: 'PWA',
+    comm: 'favicon',
+    start: '11.04.2025',
+    finish: '11.04.2025',
+  },
 ]
