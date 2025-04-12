@@ -220,7 +220,14 @@ export const ver = [
     ver: '2.8.0',
     desc: 'menu info',
     comm: 'siPrefix: mathematical abbreviations of SI numbers',
-    start: '11.04.2025',
-    finish: '11.04.2025',
+    start: '12.04.2025',
+    finish: '12.04.2025',
+  },
+  {
+    ver: '2.9.0',
+    desc: 'counts today',
+    comm: 'the number of repetitions for today is calculated',
+    start: '12.04.2025',
+    finish: '12.04.2025',
   },
 ]
