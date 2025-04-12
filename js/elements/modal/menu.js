@@ -1,6 +1,6 @@
 import { showModal } from './modal.js'
 import { backupDB, importDB } from '../../func/uploading.js'
-import { getInfo } from '../../func/get-info.js'
+import { getInfo } from './get-info.js'
 
 export function menu() {
   showModal()

@@ -99,3 +99,20 @@ export function getStatus(item) {
   }
   return item
 }
+// Сокращенное число
+export function siPrefix(num) {
+  let x = 0
+  
+  if (num > 1000000000000){
+      x = (num/1000/1000/1000/1000).toFixed(2) + 'T'
+  } else if (num > 1000000000){
+      x = (num/1000/1000/1000).toFixed(2) + 'G'
+  } else if (num > 1000000){
+      x = (num/1000/1000).toFixed(2) + 'M'
+  } else if (num > 1000) {
+      x = (num/1000).toFixed(2) + 'k'
+  } else {
+      x = num
+  }
+  return x
+}
