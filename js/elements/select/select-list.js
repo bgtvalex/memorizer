@@ -6,23 +6,6 @@ export function selectList() {
   const $select = document.querySelector('.select-list')
 
   $select.addEventListener('change', () => {
-    // switch ($select.value) {
-    //   case 'wait':
-    //     renderCards('wait')
-    //     break
-    //   case 'study':
-    //     renderCards('study')
-    //     break
-    //   case 'done':
-    //     renderCards('done')
-    //     break
-    //   case 'all':
-    //     renderCards('all')
-    //     break
-    //   default:
-    //     renderCards('active')
-    //     break
-    // }
     renderCards()
   })
 }

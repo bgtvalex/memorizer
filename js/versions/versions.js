@@ -225,7 +225,14 @@ export const ver = [
   },
   {
     ver: '2.9.0',
-    desc: 'counts today',
+    desc: 'today\'s counts',
+    comm: 'the number of repetitions for today is calculated',
+    start: '12.04.2025',
+    finish: '12.04.2025',
+  },
+  {
+    ver: '2.9.1',
+    desc: 'fix: counts',
     comm: 'the number of repetitions for today is calculated',
     start: '12.04.2025',
     finish: '12.04.2025',

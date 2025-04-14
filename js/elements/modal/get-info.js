@@ -1,13 +1,11 @@
 import { getDB } from '../../func/storage.js'
 import { siPrefix } from '../../func/func.js'
 import { sumCount } from '../../func/sum-count.js'
-import { getCountToday } from '../../func/getCountToday.js'
+import { getCountToday } from '../../func/get-count-today.js'
 
 export function getInfo() {
   const el = document.querySelector('.modal__content')
   const db = getDB('memorizer')
-  // повторения за вчера
-  const lastCounts = getDB('lastCounts')
   el.innerHTML = `
     <div class="info">
       <p><i>число карточек:</i> ${db.length}</p>
@@ -15,8 +13,8 @@ export function getInfo() {
       <p><i>учу:</i> ${filterStatus('study').length}</p>
       <p><i>повторяю:</i> ${filterStatus('active').length}</p>
       <p><i>выучено:</i> ${filterStatus('done').length}</p>
-      <p><i>сегодня:</i> ${siPrefix(sumCount())}</p>
-      <p><i>повторения:</i> ${getCountToday()}</p>
+      <p><i>повторения:</i> ${siPrefix(sumCount())}</p>
+      <p><i>сегодня:</i> ${getCountToday()}</p>
     </div>
   `
   function filterStatus(status) {

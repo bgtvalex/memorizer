@@ -27,7 +27,6 @@ export function replaceAllReturns(inText) {
 }
 
 // замена тегов спец-символами (безопасный ввод)
-
 export function saveHtmlString(inp) {
   return inp
     .replaceAll('<', '&lt;')
@@ -87,7 +86,7 @@ export function getStatus(item) {
   if (item.count == 1) {
     item.start = getToday(Date.now())
   }
-  if (item.count > 0 && item.count <= 9) {
+  if (item.count > 0 && item.count < 10) {
     item.status = 'study'
   }
   if (item.count >= 10 && item.count <= 100) {
