@@ -45,9 +45,11 @@ export function renderCards() {
 							<div class="card__last-remember">${item.finish}</div>
 							<div class="card__last-remember">[${item.lastRemember}]</div>
 						</div>
-						<div class="card__counter">
-							<div class="card__count">${item.count}</div>
-						</div>
+            ${cl == 'wait' ? "" : 
+                `<div class="card__counter">
+                  <div class="card__count">${item.count}</div>
+                  <div class="card__count">- ${item.round}</div>
+                </div>` }
           </div>
         </div>`
   })

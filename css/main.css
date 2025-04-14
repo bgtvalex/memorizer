@@ -84,3 +84,12 @@ h2 {
     width: auto;
   }
 }
+.round {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.s-info {
+  width: 25px;
+  cursor: pointer;
+}

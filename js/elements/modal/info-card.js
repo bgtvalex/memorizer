@@ -1,7 +1,9 @@
-import { getDB, setDB } from '../../func/storage.js'
+import { getDB } from '../../func/storage.js'
 import { trans } from '../../db/trans.js'
+import { iCard } from './i-card.js'
 
 export function infoCard(el, id) {
+  console.log('el', el)
   const bd = getDB('memorizer')
   const card = bd.find((i) => i.id == id)
   const transFull = trans.find((i) => i.id == card.trans)
@@ -14,6 +16,10 @@ export function infoCard(el, id) {
       <p><i>закончено:</i> ${card.finish}</p>
       <p><i>повторения:</i> ${card.count}</p>
       <p><i>последнее повторение:</i> ${card.lastRemember}</p>
+      <p class="round"><i>круг:</i> ${card.round} <img class="s-info" src="/img/info-white-50.png" alt="info"></p>
     </div>
   `
+  const sInfo = document.querySelector('.s-info')
+  console.log(sInfo)
+  sInfo.addEventListener('click', iCard)
 }

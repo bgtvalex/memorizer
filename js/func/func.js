@@ -79,25 +79,7 @@ export function addUnderline(){
       myElement.value = text.slice(0, startPosition) + '<u>' + text.slice(startPosition, endPosition) + '</u>' + text.slice(endPosition)
 }
 
-export function getStatus(item) {
-  if (item.count == 0) {
-    item.status = 'wait'
-  }
-  if (item.count == 1) {
-    item.start = getToday(Date.now())
-  }
-  if (item.count > 0 && item.count < 10) {
-    item.status = 'study'
-  }
-  if (item.count >= 10 && item.count <= 100) {
-    item.status = 'active'
-  }
-  if (item.count >= 100) {
-    item.status = 'done'
-    item.finish = getToday(Date.now())
-  }
-  return item
-}
+
 // Сокращенное число
 export function siPrefix(num) {
   let x = 0

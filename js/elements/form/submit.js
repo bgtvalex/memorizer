@@ -1,11 +1,9 @@
 import { getDB, setDB } from '../../func/storage.js'
 import { getToday } from '../../func/func.js'
 import { trans } from '../../db/trans.js'
-import { replaceAllReturns } from '../../func/func.js'
 import { renderCards } from '../render-cards.js'
 import { closeModal } from '../modal/modal.js'
-import { lineBreak } from '../../func/func.js'
-import { getStatus } from './../../func/func.js'
+import { getStatus } from '../../func/getStatus.js'
 
 export function handleSubmit(e, form) {
   e.preventDefault()

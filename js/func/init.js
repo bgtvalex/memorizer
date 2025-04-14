@@ -3,6 +3,7 @@ import {renderCards} from '../elements/render-cards.js'
 import {demo} from '../db/demo.js'
 import { selectList } from '../elements/select/select-list.js'
 import { getCountToday } from './get-count-today.js'
+import { setRound } from './set-round.js'
 
 export function init() {
   let db = getDB('memorizer')
@@ -10,6 +11,8 @@ export function init() {
     setDB('memorizer', demo)
     db = getDB('memorizer')
   }
+
+  setRound()
   
   getCountToday()
 

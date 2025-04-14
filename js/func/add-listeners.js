@@ -10,7 +10,7 @@ import { editCard } from '../elements/modal/edit-card.js'
 import { infoCard } from '../elements/modal/info-card.js'
 import { delCard } from '../elements/modal/del-card.js'
 import { getToday } from './func.js'
-import { getStatus } from './func.js'
+import { getStatus } from './getStatus.js'
 
 export function addListeners() {
   let bd = getDB('memorizer')
