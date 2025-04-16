@@ -245,7 +245,7 @@ export const ver = [
     finish: '12.04.2025',
   },
   {
-    ver: '2.10.1',
+    ver: '2.10.4',
     desc: 'fix',
     comm: 'counts, text, menu, info',
     start: '12.04.2025',
