@@ -11,16 +11,16 @@ export function menu() {
         <div class="menu__h">Данные</div>
       </li>
       <li class="menu__item backup">
-        <img class="menu__img" src="img/backup.png" alt="data" />
+        <img class="menu__img" src="img/backup.svg" alt="data" />
         <div class="menu__text">Выгрузить данные</div>
       </li>
       <li class="menu__item import">
         <input type="file" class="menu__file" hidden="true">
-        <img class="menu__img" src="img/import.png" alt="data" />
+        <img class="menu__img" src="img/import.svg" alt="data" />
         <div class="menu__text">Загрузить данные</div>
       </li>
       <li class="menu__item info">
-        <img class="menu__img" src="img/info-white.png" alt="data" />
+        <img class="menu__img" src="img/info.svg" alt="data" />
         <div class="menu__text">Информация</div>
       </li>
     </ul>

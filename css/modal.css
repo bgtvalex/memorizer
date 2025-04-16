@@ -52,6 +52,9 @@
 .modal .info i {
   color: var(--l-blue);
 }
+.modal sup{
+  font-size: 12px;
+}
 
 /* modal__form */
 .wrapper {

@@ -11,12 +11,12 @@ export function infoCard(el, id) {
     <div class="info">
       <p><i>место:</i> ${card.place}</p>
       <p><i>перевод:</i> ${transFull.title}</p>
-      <p><i>создано:</i> ${card.create}</p>
+      <p><i>добавлено:</i> ${card.create}</p>
       <p><i>начато:</i> ${card.start}</p>
       <p><i>закончено:</i> ${card.finish}</p>
       <p><i>повторения:</i> ${card.count}</p>
       <p><i>последнее повторение:</i> ${card.lastRemember}</p>
-      <p class="round"><i>круг:</i> ${card.round} <img class="s-info" src="/img/info-white-50.png" alt="info"></p>
+      <p class="round"><i>круг:</i> ${card.round} <img class="s-info" src="./../../../img/info-white-50.png" alt="info"></p>
     </div>
   `
   const sInfo = document.querySelector('.s-info')

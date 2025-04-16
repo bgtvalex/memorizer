@@ -6,6 +6,7 @@ export function getStatus(item) {
   }
   if (item.count == 1) {
     item.start = getToday(Date.now())
+    item.status = 'study'
   }
   if (item.count > 0 && item.count < 10) {
     item.status = 'study'
@@ -26,6 +27,7 @@ export function getStatus(item) {
 			item.roundNextDate = item.finish
 			item.finish = ''
 		}
+    item.status = 'wait'
     item.round = 2
   }
   if (item.count == 110) {
