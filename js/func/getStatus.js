@@ -7,6 +7,7 @@ export function getStatus(item) {
   if (item.count == 1) {
     item.start = getToday(Date.now())
     item.status = 'study'
+    item.roundNextDate
   }
   if (item.count > 0 && item.count < 10) {
     item.status = 'study'
@@ -17,11 +18,11 @@ export function getStatus(item) {
   if (item.count > 100) {
     item.status = 'in process'
   }
-  if (item.count == 10) {
+  if (item.count == 9) {
     item.roundNextDate = getToday(new Date())
     item.round = 1
   }
-  if (item.count == 100) {
+  if (item.count == 99) {
 		item.roundNextDate = getToday(new Date())
 		if (item.finish == item.lastRemember) {
 			item.roundNextDate = item.finish
@@ -30,7 +31,7 @@ export function getStatus(item) {
     item.status = 'wait'
     item.round = 2
   }
-  if (item.count == 110) {
+  if (item.count == 109) {
     item.roundNextDate = getToday(new Date())
 		if (item.finish == item.lastRemember) {
 			item.roundNextDate = item.finish
@@ -38,23 +39,23 @@ export function getStatus(item) {
 		}
     item.round = 3
   }
-  if (item.count == 120) {
+  if (item.count == 119) {
     item.roundNextDate = getToday(new Date())
     item.round = 4
   }
-  if (item.count == 130) {
+  if (item.count == 129) {
     item.roundNextDate = getToday(new Date())
     item.round = 5
   }
-  if (item.count == 140) {
+  if (item.count == 139) {
     item.roundNextDate = getToday(new Date())
     item.round = 6
   }
-  if (item.count == 150) {
+  if (item.count == 149) {
     item.roundNextDate = getToday(new Date())
     item.round = 7
   }
-  if (item.count == 160) {
+  if (item.count == 159) {
     item.finished = getToday(new Date())
     item.roundNextDate = getToday(new Date())
     item.round = 'done'

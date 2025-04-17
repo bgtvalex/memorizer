@@ -245,10 +245,10 @@ export const ver = [
     finish: '12.04.2025',
   },
   {
-    ver: '2.10.4',
+    ver: '2.10.5',
     desc: 'fix',
     comm: 'counts, text, menu, info',
-    start: '12.04.2025',
-    finish: '12.04.2025',
+    start: '16.04.2025',
+    finish: '17.04.2025',
   },
 ]
