@@ -252,7 +252,7 @@ export const ver = [
     finish: '17.04.2025',
   },
   {
-    ver: '2.11.0',
+    ver: '2.11.1',
     desc: 'svg',
     comm: 'png to svg',
     start: '17.04.2025',
