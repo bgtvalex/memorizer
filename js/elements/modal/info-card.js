@@ -16,7 +16,7 @@ export function infoCard(el, id) {
       <p><i>закончено:</i> ${card.finish}</p>
       <p><i>повторения:</i> ${card.count}</p>
       <p><i>последнее повторение:</i> ${card.lastRemember}</p>
-      <p class="round"><i>круг:</i> ${card.round} <sup>${card.roundNextDate ? card.roundNextDate : ''}</sup> <img class="s-info" src="img/info-white-50.png" alt="info"></p>
+      <p class="round"><i>круг:</i> ${card.round} <sup>${card.roundNextDate ? card.roundNextDate : ''}</sup> <img class="s-info" src="img/info.svg" alt="info"></p>
     </div>
   `
   const sInfo = document.querySelector('.s-info')

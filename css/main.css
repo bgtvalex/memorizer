@@ -3,6 +3,7 @@
   --gray: #3c5165;
   --l-gray: #95a4b5;
   --l-blue: #32c9dc;
+  --icon: #030bfc;
   --blue: #0d6efd;
   --blue-hover: #0b5ed7;
   --yellow: yellow;
@@ -95,4 +96,7 @@ h2 {
 .s-info {
   width: 15px;
   cursor: pointer;
+}
+.card__status {
+  width: 25px;
 }

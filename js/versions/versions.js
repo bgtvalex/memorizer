@@ -251,4 +251,11 @@ export const ver = [
     start: '16.04.2025',
     finish: '17.04.2025',
   },
+  {
+    ver: '2.11.0',
+    desc: 'svg',
+    comm: 'png to svg',
+    start: '17.04.2025',
+    finish: '17.04.2025',
+  },
 ]

@@ -35,7 +35,8 @@ export function renderCards() {
 				  <div class="card__id">${item.id}</div>
 					<div class="card__title">
 						<div class="card__place">${item.place} <small>(${item.trans})</small></div>
-						<div class="card__status">${item.status}</div>
+						<div class="card__status"><img src="img/${item.status}.svg"/></div>
+						<!--<div class="card__status">${item.status}</div>-->
 					</div>
           
           <div class="card__text">${item.text}</div>

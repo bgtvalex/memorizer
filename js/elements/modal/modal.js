@@ -12,8 +12,8 @@ export function closeModal() {
 // card
 export function modalCard(content) {
   content.innerHTML = `
-    <img src="img/edit-blue.png" class="modal__icon modal__edit" />
-    <img src="img/del-red.png" class="modal__icon modal__del" />
-    <img src="img/info-blue.png" class="modal__icon modal__info" />
+    <img src="img/edit.svg" class="modal__icon modal__edit" />
+    <img src="img/delete.svg" class="modal__icon modal__del" />
+    <img src="img/info-blue.svg" class="modal__icon modal__info" />
   `
 }
