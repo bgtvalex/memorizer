@@ -10,6 +10,25 @@
   --orange: orange;
   --white: #fff;
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue) var(--gray);
+}
+
+/* для Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--gray)
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+  border-radius: 3px;
+  border: 1px solid var(--blue);
+}
 body {
   margin: 0;
   padding: 0;
@@ -34,6 +53,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   background-color: var(--black);
+  z-index: 100;
 }
 .wrapper__nav {
   display: flex;

@@ -258,4 +258,11 @@ export const ver = [
     start: '17.04.2025',
     finish: '17.04.2025',
   },
+  {
+    ver: '2.12.0',
+    desc: 'JSON',
+    comm: 'A page showing cards in JSON format',
+    start: '18.04.2025',
+    finish: '18.04.2025',
+  },
 ]
