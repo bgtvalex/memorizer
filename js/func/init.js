@@ -13,7 +13,6 @@ export function init() {
   }
 
   setRound()
-  
   getCountToday()
 
   if (db.length >= 0) {
