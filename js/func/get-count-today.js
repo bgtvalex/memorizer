@@ -11,7 +11,9 @@ export function getCountToday() {
       yesterday: getToday(new Date()),
       countingForYesterday: sumCount()
     }
+		
     setDB('counts', obj)
+		location.reload()
   }
 	if (counts.yesterday == getToday(new Date())) {
 		counts.countingForToday = sumCount()

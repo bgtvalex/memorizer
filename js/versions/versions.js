@@ -265,4 +265,11 @@ export const ver = [
     start: '18.04.2025',
     finish: '18.04.2025',
   },
+  {
+    ver: '2.13.0',
+    desc: 'fix Demo',
+    comm: 'problem yesterday',
+    start: '18.04.2025',
+    finish: '18.04.2025',
+  },
 ]
