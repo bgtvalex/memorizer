@@ -55,6 +55,33 @@ h2 {
   background-color: var(--black);
   z-index: 100;
 }
+.navigation__search {
+  padding: 15px;
+  position: absolute;
+  top: 60px;
+  display: flex;
+  gap: 10px;
+  background-color: var(--black);
+  width: 70%;
+  border-radius: 5px;
+  z-index: 99;
+  transition:  all .3s;
+}
+.navigation__search.show {
+  top: -70px;
+}
+
+.navigation__search input {
+  width: 85%;
+  font-size: 20px;
+}
+.navigation__close {
+  background-color: var(--blue-hover);
+}
+.navigation__searching img,
+.navigation__close img{
+  width: 17px;
+}
 .wrapper__nav {
   display: flex;
   gap: 10px;

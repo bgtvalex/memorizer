@@ -1,12 +1,12 @@
 import { getDB } from '../func/storage.js'
 import { addListeners } from '../func/add-listeners.js'
 
-export function renderCards() {
+export function renderCards(searching, all) {
   const $select = document.querySelector('.select-list')
-  const status = $select.value
+  const status = all ?? $select.value
 
   let $cards = document.querySelector('.cards')
-  let bd = getDB('memorizer')
+  let bd = searching ?? getDB('memorizer')
   $cards.innerHTML = ''
   // если список пуст
   if (bd.length == 0) {

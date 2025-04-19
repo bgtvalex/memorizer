@@ -286,4 +286,11 @@ export const ver = [
     start: '19.04.2025',
     finish: '19.04.2025',
   },
+  {
+    ver: '2.16.0',
+    desc: 'search',
+    comm: 'card search',
+    start: '19.04.2025',
+    finish: '19.04.2025',
+  },
 ]

@@ -3,6 +3,7 @@ import { backupDB, importDB } from '../../func/uploading.js'
 import { getInfo } from './get-info.js'
 import { getProfile } from './get-profile.js'
 import { getJson } from './get-json.js'
+import { getSearch } from './get-search.js'
 
 export function menu() {
   showModal()
@@ -11,6 +12,10 @@ export function menu() {
 		<ul class="menu__list">
       <li class="menu__item">
         <div class="menu__h">Данные</div>
+      </li>
+      <li class="menu__item search">
+        <img class="menu__img" src="img/search_btn.svg" alt="data" />
+        <div class="menu__text">Найти</div>
       </li>
       <li class="menu__item backup">
         <img class="menu__img" src="img/backup.svg" alt="data" />
@@ -40,5 +45,6 @@ export function menu() {
   document.querySelector('.import').addEventListener('click', importDB)
   document.querySelector('.info').addEventListener('click', getInfo)
   document.querySelector('.profile').addEventListener('click', getProfile)
+  document.querySelector('.search').addEventListener('click', getSearch)
   document.querySelector('.json').addEventListener('click', getJson)
 }
