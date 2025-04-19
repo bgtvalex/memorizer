@@ -280,7 +280,7 @@ export const ver = [
     finish: '18.04.2025',
   },
   {
-    ver: '2.15.1',
+    ver: '2.15.2',
     desc: 'profile',
     comm: 'profile',
     start: '19.04.2025',

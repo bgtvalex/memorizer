@@ -27,6 +27,9 @@ export function renderCards() {
     if (item.status == 'active') {
       cl = 'active'
     }
+    if (item.status == 'in process') {
+      cl = 'in process'
+    }
     if (item.status == 'done') {
       cl = 'done'
     }
