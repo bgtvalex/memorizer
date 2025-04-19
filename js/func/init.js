@@ -11,6 +11,21 @@ export function init() {
     setDB('memorizer', demo)
     db = getDB('memorizer')
   }
+  let profile = getDB('mb-profile')
+  if (!profile) {
+    const obj = {
+      countsPerDay: 50,
+      round0: 10,
+      round1: 100,
+      round2: 110,
+      round3: 120,
+      round4: 130,
+      round5: 140,
+      round6: 150,
+      round7: 160
+    }
+    setDB('mb-profile', obj)
+  }
 
   setRound()
   getCountToday()

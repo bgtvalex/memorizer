@@ -1,6 +1,7 @@
 import { showModal } from './modal.js'
 import { backupDB, importDB } from '../../func/uploading.js'
 import { getInfo } from './get-info.js'
+import { getProfile } from './get-profile.js'
 import { getJson } from './get-json.js'
 
 export function menu() {
@@ -24,6 +25,10 @@ export function menu() {
         <img class="menu__img" src="img/info.svg" alt="data" />
         <div class="menu__text">Информация</div>
       </li>
+      <li class="menu__item profile">
+        <img class="menu__img" src="img/profile.svg" alt="data" />
+        <div class="menu__text">Настройки</div>
+      </li>
       <li class="menu__item json">
         <img class="menu__img" src="img/json.svg" alt="data" />
         <div class="menu__text">JSON</div>
@@ -34,5 +39,6 @@ export function menu() {
   document.querySelector('.backup').addEventListener('click', backupDB)
   document.querySelector('.import').addEventListener('click', importDB)
   document.querySelector('.info').addEventListener('click', getInfo)
+  document.querySelector('.profile').addEventListener('click', getProfile)
   document.querySelector('.json').addEventListener('click', getJson)
 }

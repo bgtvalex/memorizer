@@ -32,7 +32,7 @@ export function handleSubmit(e, form) {
     book: obj.book,
     chapter: obj.chapter,
     verse: obj.verse,
-    count: obj.count,
+    count: obj.count && 0,
     status: 'wait',
     trans: obj.trans,
     transFull: trans.find((i) => i.id == obj.trans).title,
@@ -47,7 +47,7 @@ export function handleSubmit(e, form) {
     card.text = memo.text
     card.trans = memo.trans
     card.transFull = memo.transFull
-    card.count = memo.count
+    card.count = memo.count && 0
     card.status = getStatus(card).status
   } else {
     db.push(memo)

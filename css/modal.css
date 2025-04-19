@@ -85,7 +85,7 @@
 .modal__trans,
 .start,
 .count {
-  width: 30px;
+  width: 40px;
   text-align: center;
   font-size: 16px;
   border: 1px solid var(--l-gray);
@@ -205,4 +205,13 @@
   .input {
     width: 95%;
   }
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.profile-form label i{
+  color: var(--yellow) !important;
 }
