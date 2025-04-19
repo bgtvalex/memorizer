@@ -62,13 +62,14 @@ h2 {
   display: flex;
   gap: 10px;
   background-color: var(--black);
-  width: 70%;
+  width: 92%;
   border-radius: 5px;
   z-index: 99;
   transition:  all .3s;
 }
 .navigation__search.show {
   top: -70px;
+  left: 3px;
 }
 
 .navigation__search input {
