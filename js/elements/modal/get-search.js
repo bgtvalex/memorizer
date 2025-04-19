@@ -8,13 +8,14 @@ export function getSearch() {
   const inpWrap = document.querySelector('.navigation__search')
   const inpClose = document.querySelector('.navigation__close')
   const inp = document.querySelector('.searching')
-	const search = document.querySelector('.navigation__searching')
+  const search = document.querySelector('.navigation__searching')
 
   // открытие/закрытие окна search
   inpWrap.classList.add('show')
   inpClose.addEventListener('click', () => {
     inpWrap.classList.remove('show')
-		renderCards()
+    inp.value = ''
+    renderCards()
   })
 
   // поиск карточек
@@ -23,11 +24,12 @@ export function getSearch() {
 
   function handleInput() {
     const newList = []
-		db.forEach(item => {
-			if (item.text.toLowerCase().includes((inp.value).toLowerCase())) {
-				newList.push(item)
-			}
-		});
-		 renderCards(newList, 'all')
+    db.forEach((item) => {
+      if (item.text.toLowerCase().includes(inp.value.toLowerCase())) {
+        newList.push(item)
+      }
+    })
+    renderCards(newList, 'all')
+    inp.value = ''
   }
 }
