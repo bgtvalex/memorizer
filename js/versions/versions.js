@@ -280,10 +280,10 @@ export const ver = [
     finish: '18.04.2025',
   },
   {
-    ver: '2.15.0',
+    ver: '2.15.1',
     desc: 'profile',
-    comm: 'problem yesterday',
-    start: '18.04.2025',
-    finish: '18.04.2025',
+    comm: 'profile',
+    start: '19.04.2025',
+    finish: '19.04.2025',
   },
 ]
