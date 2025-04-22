@@ -4,11 +4,16 @@ import { closeModal } from './modal.js'
 export function getProfile() {
 	const el = document.querySelector('.modal__content')
 	const profile = getDB('mb-profile')
+	console.log('getProfile', profile.apocrypha);
+	
 	el.innerHTML = `
 		<div class="info">
 		<form class="profile-form">
 		<label><i>повторений в день:</i> 
 			<input type="text" name="countsPerDay" class="count" value=${profile.countsPerDay} />
+		</label>
+		<label><i>апокрифы:</i> 
+			<input type="checkbox" name="apocrypha" class="count" ${profile.apocrypha ? 'checked' : '' } />
 		</label>
 		<label><i>круг 0:</i>
 			<input type="text" name="round0" class="count" value=${profile.round0} />
@@ -48,8 +53,14 @@ export function getProfile() {
 		formData.forEach((val, key) => {
 			obj[key] = val
 		})
-		console.log('obj:', obj)
+		if (obj.apocrypha == 'on') {
+			obj.apocrypha = true
+		} else {
+			obj.apocrypha = false
+		}
 		setDB('mb-profile', obj)
+		console.log('obj', obj );
+		
 		closeModal()
 	 }
 }

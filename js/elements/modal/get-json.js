@@ -8,7 +8,6 @@ export function getJson() {
 	el.innerHTML = ''
 	const db = getDB('memorizer')
 	const json = JSON.stringify(db, null, 2)
-	console.log(json)
 	
 	el.innerHTML = `
 		<div class="info json">

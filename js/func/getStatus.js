@@ -34,7 +34,9 @@ export function getStatus(item) {
     item.round = 2
   }
   if (item.count == profile.round2) {
+    console.log('round2, roundNextDate');
     item.roundNextDate = getToday(new Date())
+
 		if (item.finish == item.lastRemember) {
 			item.roundNextDate = item.finish
 			item.finish = ''
@@ -62,6 +64,8 @@ export function getStatus(item) {
     item.roundNextDate = getToday(new Date())
     item.round = 'done'
   }
+
+  // Эббингауз
   if (item.count >= profile.round1 && item.count < profile.round2 && getDays(item.roundNextDate) >= 7) {
     item.status = 'active'
   }

@@ -287,10 +287,10 @@ export const ver = [
     finish: '19.04.2025',
   },
   {
-    ver: '2.16.3',
-    desc: 'search',
-    comm: 'card search',
-    start: '19.04.2025',
-    finish: '19.04.2025',
+    ver: '2.17.0',
+    desc: 'apocrypha',
+    comm: 'add and use apocrypha',
+    start: '22.04.2025',
+    finish: '22.04.2025',
   },
 ]
