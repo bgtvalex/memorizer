@@ -3,10 +3,10 @@ import { getDB } from "./storage.js"
 const profile = getDB('mb-profile')
 
 export function getStatus(item) {
-  if (item.count == 0) {
+  if (item.count < 0) {
     item.status = 'wait'
   }
-  if (item.count == 1) {
+  if (item.count == 0) {
     item.start = getToday(Date.now())
     item.status = 'study'
     item.roundNextDate

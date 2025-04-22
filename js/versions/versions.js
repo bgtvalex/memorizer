@@ -287,7 +287,7 @@ export const ver = [
     finish: '19.04.2025',
   },
   {
-    ver: '2.17.0',
+    ver: '2.17.1',
     desc: 'apocrypha',
     comm: 'add and use apocrypha',
     start: '22.04.2025',
