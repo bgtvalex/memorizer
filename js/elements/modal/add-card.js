@@ -40,7 +40,7 @@ export function addCard() {
 				<div class="btn-r btn-italic">курсив</div>
 				<div class="btn-r btn-underline">подчеркнуто</div>
     	</div>
-			<input name="count" type="text" class="count" value="0" hidden="true">
+			<input name="count" type="text" class="count" value="-1" hidden="true">
 			<input type="submit" class="btn add" value="Добавить" />
 		</form>`
 

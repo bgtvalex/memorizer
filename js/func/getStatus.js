@@ -7,6 +7,8 @@ export function getStatus(item) {
     item.status = 'wait'
   }
   if (item.count == 0) {
+    console.log('item.start', getToday(Date.now()));
+    
     item.start = getToday(Date.now())
     item.status = 'study'
     item.roundNextDate
