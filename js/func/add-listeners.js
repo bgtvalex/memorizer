@@ -22,6 +22,9 @@ export function addListeners() {
         .closest('.card')
         .querySelector('.card__id').textContent
       const item = bd.find((item) => item.id == id)
+      if (item.count == '') {
+        item.count = 0
+      }
 
       item.count++
       getStatus(item)

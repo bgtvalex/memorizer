@@ -293,4 +293,11 @@ export const ver = [
     start: '22.04.2025',
     finish: '22.04.2025',
   },
+  {
+    ver: '2.17.5',
+    desc: 'fix rounds',
+    comm: 'fix dates update',
+    start: '11.05.2025',
+    finish: '11.05.2025',
+  },
 ]

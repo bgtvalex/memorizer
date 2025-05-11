@@ -3,7 +3,8 @@ import {renderCards} from '../elements/render-cards.js'
 import {demo} from '../db/demo.js'
 import { selectList } from '../elements/select/select-list.js'
 import { getCountToday } from './get-count-today.js'
-import { delNaNaNa } from './utils.js'
+import { delNaNaNa, roundNextDateMoreLastRemember } from './utils.js'
+import { getStatus } from './getStatus.js'
 
 
 export function init() {
@@ -16,14 +17,14 @@ export function init() {
   if (!profile) {
     const obj = {
       countsPerDay: 50,
-      round0: 10,
+      round0: 10, 
       round1: 100,
-      round2: 110,
-      round3: 120,
-      round4: 130,
-      round5: 140,
-      round6: 150,
-      round7: 160
+      round2: 110, // 1w
+      round3: 120, // 2w
+      round4: 130, // 1m
+      round5: 140, // 2m
+      round6: 150, // 6m
+      round7: 160  // 1y
     }
     setDB('mb-profile', obj)
   }
@@ -33,6 +34,11 @@ export function init() {
   delNaNaNa()
 
   if (db.length >= 0) {
+    roundNextDateMoreLastRemember(db)
+    db.forEach(item => {
+      getStatus(item)
+    });
+    setDB('memorizer', db)
     selectList()
     renderCards()
   }
