@@ -99,7 +99,5 @@ export function siPrefix(num) {
 }
 
 export function showHide(el){
-  console.log('showHide', );
-  
   el.classList.toggle('show')
 }

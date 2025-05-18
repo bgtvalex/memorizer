@@ -308,7 +308,7 @@ export const ver = [
     finish: '18.05.2025',
   },
   {
-    ver: '2.17.9',
+    ver: '2.17.10',
     desc: 'json in the card',
     comm: 'json in the card',
     start: '18.05.2025',

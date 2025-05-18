@@ -17,21 +17,14 @@ export function getJsonCards() {
 	`
 }
 // card
-
 export function getJsonOneCard(card) {
-	// closeModal()
-	// const el = document.querySelector('.info')
-	// el.innerHTML = ''
-	// const db = getDB('memorizer')
 	const json = JSON.stringify(card, null, 2)
-	
 	return `
 		<div class="info json-y card-json">
 			<b class="btn card-json-btn">Card JSON:</b>
 			<pre class="pre-card-json">${json}</pre>
 		</div>
 	`
-	
 }
 // options
 export function getJsonOpt() {

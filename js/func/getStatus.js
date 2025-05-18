@@ -11,8 +11,8 @@ export function getStatus(item) {
   }
   if (item.count == 0) {
     item.start = getToday(Date.now())
-    item.status = 'study'
     item.roundNextDate = getToday(Date.now())
+    item.status = 'study'
   }
   // round 0 - study
   if (item.count > 0 && item.count < profile.round0) {
@@ -56,7 +56,6 @@ export function getStatus(item) {
   if (item.count == profile.round6 && item.round == 6) {
     item.roundNextDate = getToday(new Date())
     item.status = 'in process'
-    item.round = 7
   }
   if (item.count == profile.round7 && item.round == 7) {
     item.finished = getToday(new Date())
@@ -66,14 +65,11 @@ export function getStatus(item) {
   }
 
   // Эббингауз
-  
   if (item.count >= profile.round1 && item.count < profile.round2 && getDays(item.roundNextDate) >= 7) {
     item.status = 'active'
-    // console.log('round2', item.status, item);
   }
   if (item.count < profile.round3 && item.count > profile.round4 && getDays(item.roundNextDate) >= 14) {
     item.status = 'active'
-    // console.log('round2', item.status, item);
   }
   if (item.count < profile.round4 && item.count > profile.round5 && getDays(item.roundNextDate) >= 30) {
     item.status = 'active'
