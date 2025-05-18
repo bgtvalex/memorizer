@@ -1,9 +1,11 @@
 import { getDB } from '../../func/storage.js'
 import { trans } from '../../db/trans.js'
 import { iCard } from './i-card.js'
+import { getJsonOneCard } from './get-json.js'
+import { showHide } from '../../func/func.js'
+
 
 export function infoCard(el, id) {
-  console.log('el', el)
   const bd = getDB('memorizer')
   const card = bd.find((i) => i.id == id)
   const transFull = trans.find((i) => i.id == card.trans)
@@ -17,9 +19,12 @@ export function infoCard(el, id) {
       <p><i>повторения:</i> ${card.count}</p>
       <p><i>последнее повторение:</i> ${card.lastRemember}</p>
       <p class="round"><i>круг:</i> ${card.round} <sup>${card.roundNextDate ? card.roundNextDate : ''}</sup> <img class="s-info" src="img/info.svg" alt="info"></p>
+
+      <div>${getJsonOneCard(card)}</div>
     </div>
   `
   const sInfo = document.querySelector('.s-info')
-  console.log(sInfo)
   sInfo.addEventListener('click', iCard)
+  const preCardJson = document.querySelector('.pre-card-json')
+  document.querySelector('.card-json-btn').addEventListener('click', () =>  showHide(preCardJson))
 }

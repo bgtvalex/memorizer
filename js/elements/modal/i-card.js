@@ -1,4 +1,5 @@
 import { getDB } from "../../func/storage.js"
+import { getProfile } from "./get-profile.js"
 
 export function iCard(el) {
   console.log(el)
@@ -15,6 +16,11 @@ export function iCard(el) {
 			<p>5 круг (до ${p.round5}) — через 2 месяца</p>
 			<p>6 круг (до ${p.round6}) — через 6 месяцев</p>
 			<p>7 круг (до ${p.round7}) — через 1 год</p>
+			<button class="btn edit">
+				<img src="img/edit-white.svg" class="edit__ebbing" />
+			</button>
 		</div>
 	`
+
+	document.querySelector('.edit').addEventListener('click', getProfile)
 }

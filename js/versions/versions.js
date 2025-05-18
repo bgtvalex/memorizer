@@ -307,4 +307,11 @@ export const ver = [
     start: '18.05.2025',
     finish: '18.05.2025',
   },
+  {
+    ver: '2.17.7',
+    desc: 'json in the card',
+    comm: 'json in the card',
+    start: '18.05.2025',
+    finish: '18.05.2025',
+  },
 ]
