@@ -301,7 +301,7 @@ export const ver = [
     finish: '11.05.2025',
   },
   {
-    ver: '2.17.6.1',
+    ver: '2.17.6.2',
     desc: 'fix counts',
     comm: 'fix NaN',
     start: '18.05.2025',

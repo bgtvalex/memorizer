@@ -6,7 +6,7 @@ import { sumCount } from "./sum-count.js";
 export function getCountToday() {
 	const counts = getDB('mb-counts')
 	// если нет counts
-  if (!counts) {
+  if (!counts || counts == null) {
     const obj = {
       yesterday: getToday(new Date()),
       countingForYesterday: sumCount()
