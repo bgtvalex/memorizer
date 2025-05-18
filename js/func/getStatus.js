@@ -7,11 +7,12 @@ export function getStatus(item) {
   
   if (item.count < 0 || item.count == '') {
     item.status = 'wait'
+    item.round = 0
   }
   if (item.count == 0) {
     item.start = getToday(Date.now())
     item.status = 'study'
-    item.roundNextDate = ''
+    item.roundNextDate = getToday(Date.now())
   }
   // round 0 - study
   if (item.count > 0 && item.count < profile.round0) {
