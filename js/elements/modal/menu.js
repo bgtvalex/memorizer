@@ -2,7 +2,7 @@ import { showModal } from './modal.js'
 import { backupDB, importDB } from '../../func/uploading.js'
 import { getInfo } from './get-info.js'
 import { getProfile } from './get-profile.js'
-import { getJson } from './get-json.js'
+import { getJsonCards, getJsonOpt} from './get-json.js'
 import { getSearch } from './get-search.js'
 
 export function menu() {
@@ -34,9 +34,13 @@ export function menu() {
         <img class="menu__img" src="img/profile.svg" alt="data" />
         <div class="menu__text">Настройки</div>
       </li>
-      <li class="menu__item json">
+      <li class="menu__item json json-cards">
         <img class="menu__img" src="img/json.svg" alt="data" />
-        <div class="menu__text">JSON</div>
+        <div class="menu__text">Cards JSON</div>
+      </li>
+      <li class="menu__item json json-opt">
+        <img class="menu__img" src="img/json.svg" alt="data" />
+        <div class="menu__text">Options JSON</div>
       </li>
     </ul>
 		`
@@ -46,5 +50,6 @@ export function menu() {
   document.querySelector('.info').addEventListener('click', getInfo)
   document.querySelector('.profile').addEventListener('click', getProfile)
   document.querySelector('.search').addEventListener('click', getSearch)
-  document.querySelector('.json').addEventListener('click', getJson)
+  document.querySelector('.json-cards').addEventListener('click', getJsonCards)
+  document.querySelector('.json-opt').addEventListener('click', getJsonOpt)
 }
