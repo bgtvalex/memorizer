@@ -15,9 +15,14 @@ export function getCountToday() {
     setDB('mb-counts', obj)
 		location.reload()
   }
-	if (counts.yesterday == getToday(new Date())) {
+	if (counts.yesterday == getToday(new Date()) ) {
 		counts.countingForToday = sumCount()
 		setDB('mb-counts', counts)
+	}
+	if (counts.countingForYesterday == null) {
+		const db = getDB('mb-counts')
+		counts.countingForYesterday = today.countingForToday
+		setDB('mb-counts', db)
 	}
   if (counts.yesterday != getToday(new Date())) {
 		counts.yesterday = getToday(new Date())
