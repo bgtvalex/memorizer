@@ -21,7 +21,7 @@ export function getCountToday() {
 	}
 	if (counts.countingForYesterday == null) {
 		const db = getDB('mb-counts')
-		counts.countingForYesterday = today.countingForToday
+		counts.countingForYesterday = db.countingForToday
 		setDB('mb-counts', db)
 	}
   if (counts.yesterday != getToday(new Date())) {
