@@ -300,4 +300,11 @@ export const ver = [
     start: '11.05.2025',
     finish: '11.05.2025',
   },
+  {
+    ver: '2.17.6',
+    desc: 'fix counts',
+    comm: 'fix NaN',
+    start: '18.05.2025',
+    finish: '18.05.2025',
+  },
 ]
