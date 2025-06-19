@@ -1,5 +1,6 @@
 import { getDB, setDB } from './storage.js'
 
+// убрать NaN
 export function delNaNaNa() {
   const db = getDB('memorizer')
   db.forEach((item) => {
@@ -12,7 +13,7 @@ export function delNaNaNa() {
   })
   setDB('memorizer', db)
 }
-
+// если roundNextDate больше lastRemember, то roundNextDate присваиваем lastRemember
 export function roundNextDateMoreLastRemember(db) {
   db.forEach((item) => {
     const roundNextDate = new Date(item.roundNextDate).getTime()

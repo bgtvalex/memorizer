@@ -3,8 +3,6 @@ import { getDB } from "./storage.js"
 const profile = getDB('mb-profile')
 
 export function getStatus(item) {
-  
-  
   if (item.count < 0 || item.count == '') {
     item.status = 'wait'
     item.round = 0
@@ -65,22 +63,40 @@ export function getStatus(item) {
   }
 
   // Эббингауз
+  /*
+  round0
+  round1 - до 100
+  round2 - до 110
+  round3 - до 120
+  round4 - до 130
+  round5 - до 140
+  round6 - до 150
+  round7 - до 160
+  */
+  // Круг 1 (<= 100)
+  if (item.count >= profile.round2 ) {
+    console.log(item.place, item.count );
+    
+  }
   if (item.count >= profile.round1 && item.count < profile.round2 && getDays(item.roundNextDate) >= 7) {
     item.status = 'active'
   }
-  if (item.count < profile.round3 && item.count > profile.round4 && getDays(item.roundNextDate) >= 14) {
+  if (item.count >= profile.round2 && item.count < profile.round3 && getDays(item.roundNextDate) >= 14) {
     item.status = 'active'
   }
-  if (item.count < profile.round4 && item.count > profile.round5 && getDays(item.roundNextDate) >= 30) {
+  if (item.count >= profile.round3 && item.count < profile.round4 && getDays(item.roundNextDate) >= 30) {
     item.status = 'active'
   }
-  if (item.count < profile.round5 && item.count > profile.round6 && getDays(item.roundNextDate) >= 60) {
+  if (item.count >= profile.round4 && item.count < profile.round5 && getDays(item.roundNextDate) >= 60) {
     item.status = 'active'
   }
-  if (item.count < profile.round6 && item.count > profile.round7 && getDays(item.roundNextDate) >= 180) {
+  if (item.count >= profile.round5 && item.count < profile.round6 && getDays(item.roundNextDate) >= 180) {
     item.status = 'active'
   }
-  if (item.count < profile.round7 && getDays(item.roundNextDate) >= 360) {
+  if (item.count >= profile.round6 && item.count < profile.round7 && getDays(item.roundNextDate) >= 360) {
+    item.status = 'active'
+  }
+  if (item.count >= profile.round7 && getDays(item.roundNextDate) >= 360) {
     item.status = 'active'
   }
   
