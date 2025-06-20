@@ -73,11 +73,6 @@ export function getStatus(item) {
   round6 - до 150
   round7 - до 160
   */
-  // Круг 1 (<= 100)
-  if (item.count >= profile.round2 ) {
-    console.log(item.place, item.count );
-    
-  }
   if (item.count >= profile.round1 && item.count < profile.round2 && getDays(item.roundNextDate) >= 7) {
     item.status = 'active'
   }

@@ -322,4 +322,12 @@ export const ver = [
     start: '19.06.2025',
     finish: '19.06.2025',
   },
+  {
+    ver: '2.18.0',
+    desc: 'pagination',
+    comm: 'pagination',
+    todo: '',
+    start: '20.06.2025',
+    finish: '20.06.2025',
+  },
 ]

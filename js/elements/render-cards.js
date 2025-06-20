@@ -1,5 +1,6 @@
 import { getDB } from '../func/storage.js'
 import { addListeners } from '../func/add-listeners.js'
+import { pagination } from '../func/pagination.js'
 
 export function renderCards(searching, all) {
   const $select = document.querySelector('.select-list')
@@ -15,6 +16,7 @@ export function renderCards(searching, all) {
 
   if (status !== 'all') {
     bd = bd.filter((item) => item.status == status)
+    bd = pagination(bd)
   }
   bd.forEach((item) => {
     let cl = ''
