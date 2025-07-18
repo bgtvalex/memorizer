@@ -225,7 +225,7 @@ export const ver = [
   },
   {
     ver: '2.9.0',
-    desc: 'today\'s counts',
+    desc: "today's counts",
     comm: 'the number of repetitions for today is calculated',
     start: '12.04.2025',
     finish: '12.04.2025',
@@ -326,8 +326,16 @@ export const ver = [
     ver: '2.18.0',
     desc: 'pagination',
     comm: 'pagination',
-    todo: '',
+    todo: 'https://rutube.ru/video/30376c9a210cef29204867d17a68a82f/',
     start: '20.06.2025',
     finish: '20.06.2025',
+  },
+  {
+    ver: '  ',
+    desc: 'Info',
+    comm: 'main mount cards',
+    todo: 'https://rutube.ru/video/30376c9a210cef29204867d17a68a82f/',
+    start: '18.07.2025',
+    finish: '18.07.2025',
   },
 ]
