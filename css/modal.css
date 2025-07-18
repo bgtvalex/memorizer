@@ -47,6 +47,13 @@
   height: 25px;
   cursor: pointer;
 }
+.modal__content > .info {
+  height: 81vh;
+}
+
+.modal__content > .info h3{
+  color: var(--orange);
+}
 .modal .info p {
   font-size: 24px;
   color: var(--yellow);

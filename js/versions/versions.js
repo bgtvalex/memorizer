@@ -331,9 +331,9 @@ export const ver = [
     finish: '20.06.2025',
   },
   {
-    ver: '  ',
+    ver: '2.18.2',
     desc: 'Info',
-    comm: 'main mount cards',
+    comm: 'total number of cards',
     todo: 'https://rutube.ru/video/30376c9a210cef29204867d17a68a82f/',
     start: '18.07.2025',
     finish: '18.07.2025',
